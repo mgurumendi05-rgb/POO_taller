@@ -1,16 +1,43 @@
-# This is a sample Python script.
+ from cuadrado import Cuadrado
+from rectangulo import Rectangulo
+from datetime import datetime
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def sumar_areas(figuras):
+    total = 0
+    for fig in figuras:
+        total += fig.area()
+    return total
 
+def sumar_perimetros(figuras):
+    total = 0
+    for fig in figuras:
+        total += fig.perimetro()
+    return total
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def main():
+    print("Fecha y hora:", datetime.now())
+    print("----FIGURAS----- ")
+    # Creación
+    c1 = Cuadrado(4)
+    c2 = Cuadrado(2)
+    r1 = Rectangulo(3, 6)
+    r2 = Rectangulo(5, 2)
 
+    figuras = [c1, c2, r1, r2]
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    # Mostrar valores
+    for f in figuras:
+        print(f, "| Área:", f.area(), "| Perímetro:", f.perimetro())
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print("\n--- Probando validación ---")
+    try:
+        Cuadrado(-5)
+    except ValueError as e:
+        print("Error atrapado:", e)
+
+    print("\n--- Totales ---")
+    print("Total áreas:", sumar_areas(figuras))
+    print("Total perímetros:", sumar_perimetros(figuras))
+
+if __name__ == "__main__":
+   main()
