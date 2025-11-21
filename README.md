@@ -9,3 +9,4 @@ Las clases Cuadrado y Rectangulo heredan de la clase base. Cada una define su pr
 En el archivo main.py se crean distintas figuras, se muestran sus áreas y perímetros, se prueba un valor inválido y se demuestran las funciones que suman áreas y perímetros de manera polimórfica.
 
 El repositorio debe incluir la ejecución del programa junto con la captura donde se vea la fecha, la hora y los resultados obtenidos.
+<img width="1786" height="1022" alt="Captura de Pantalla 2025-11-21 a la(s) 01 48 12" src="https://github.com/user-attachments/assets/5901ed14-5d27-4ab8-a948-0a4ad2cad9dd" />
